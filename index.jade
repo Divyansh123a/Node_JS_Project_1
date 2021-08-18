@@ -1,0 +1,30 @@
+extend layout 
+block content 
+       h1 Add new contact 
+       form(method ="POST" , action='/new_contact')
+            p name:
+            input#title(type="text" , name = "name" )
+            p Phone no:
+            input#title(type="text" , name = "phone" )
+            p: button(type="submit") Add new Contact 
+
+
+        h1 Add new Database
+        form(method ="POST" , action='/createdb')
+            p Databse name:
+            input#title(type="text" , name = "dbname" )
+            p: button(type="submit") Add new Database
+
+        h1 Enter phone no to delete contact 
+        form(method ="POST" , action='/delete_contact')
+        p Phone no:
+        input#title(type="text" , name = "phone" )
+        p: button(type="submit") Delete Contact 
+
+        h1 View Spacific contact 
+        form(method ="POST" , action='/view_contact')
+           p Phone no:
+           input#title(type="text" , name = "phone" )
+           p: button(type="submit") Search Contact 
+
+
